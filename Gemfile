@@ -32,6 +32,8 @@ gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
 
+gem "pagy", "~> 9.3"
+
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
@@ -58,10 +60,16 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "hotwire-spark"
+  gem "annotaterb"
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem "guard", "~> 2.19"
+  gem "guard-minitest", "~> 2.4"
+  gem "minitest", "~> 5.25"
+  gem "minitest-reporters", "~> 1.7"
 end
